@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sandrine Chanhine | Assistante polyvalente</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --yellow: #fec053;
+            --orange: #ff914d;
+            --white: #ffffff;
+            --gray: #6e7075;
+            --dark: #292a2d;
+            --light: #fffaf4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Chewy', cursive;
+            font-size: 30px;
+            color: var(--orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: var(--orange);
+        }
+
+        .section-title p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           ACCUEIL
+        ========================= */
+
+        #accueil {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at top right, rgba(254,192,83,0.25), transparent 35%),
+                linear-gradient(135deg, #fffaf4, #ffffff);
+            padding-top: 130px;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text small {
+            color: var(--orange);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .hero-text h1 span {
+            color: var(--orange);
+        }
+
+        .hero-text h3 {
+            font-size: 21px;
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-text p {
+            color: var(--gray);
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,145,77,0.25);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--orange);
+            color: var(--orange);
+        }
+
+        .btn-outline:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        .hero-photo {
+            width: 300px;
+            height: 360px;
+            margin: auto;
+            border-radius: 30px;
+            background: linear-gradient(145deg, var(--yellow), var(--orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            box-shadow: 0 20px 50px rgba(255,145,77,0.2);
+        }
+
+        .hero-photo p {
+            font-weight: 600;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #apropos {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+        }
+
+        .about-card h3 {
+            margin-bottom: 15px;
+            color: var(--orange);
+        }
+
+        .about-card p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           EXPERIENCES
+        ========================= */
+
+        .experience-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .experience {
+            border-left: 5px solid var(--orange);
+            background: #fffaf4;
+            padding: 28px 30px;
+            border-radius: 0 18px 18px 0;
+        }
+
+        .experience h3 {
+            font-size: 20px;
+        }
+
+        .experience .date {
+            color: var(--orange);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .experience .location {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .experience p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           MISSIONS
+        ========================= */
+
+        #missions {
+            background: var(--light);
+        }
+
+        .missions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .mission {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: 0.3s;
+        }
+
+        .mission:hover {
+            transform: translateY(-4px);
+        }
+
+        .mission span {
+            color: var(--orange);
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        /* =========================
+           COMPETENCES
+        ========================= */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .skill {
+            background: #fffaf4;
+            padding: 20px;
+            border-radius: 15px;
+            color: var(--gray);
+        }
+
+        .skill strong {
+            display: block;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        /* =========================
+           OUTILS
+        ========================= */
+
+        #outils {
+            background: var(--light);
+        }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .tool {
+            padding: 12px 20px;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid rgba(255,145,77,0.25);
+            color: var(--gray);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tool:hover {
+            background: var(--orange);
+            color: white;
+        }
+
+        /* =========================
+           FORMATION
+        ========================= */
+
+        .formation-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .formation {
+            padding: 25px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .formation h3 {
+            color: var(--orange);
+        }
+
+        .formation p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           LANGUES
+        ========================= */
+
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .language {
+            padding: 30px;
+            border-radius: 20px;
+            background: #fffaf4;
+        }
+
+        .language h3 {
+            margin-bottom: 10px;
+        }
+
+        .language p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        #contact {
+            background: linear-gradient(135deg, var(--orange), var(--yellow));
+            color: white;
+        }
+
+        .contact-box {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-box h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            background: white;
+            color: var(--gray);
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #292a2d;
+            color: white;
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--yellow);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .hero-photo {
+                order: -1;
+            }
+
+            .about-grid,
+            .missions-grid,
+            .skills,
+            .languages {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <nav>
+
+        <a href="#accueil" class="logo">
+            Sandrine
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="#accueil">Accueil</a></li>
+
+            <li><a href="#apropos">À propos</a></li>
+
+            <li><a href="#experiences">Expériences</a></li>
+
+            <li><a href="#missions">Missions</a></li>
+
+            <li><a href="#competences">Compétences</a></li>
+
+            <li><a href="#outils">Outils</a></li>
+
+            <li><a href="#formation">Formation</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     ACCUEIL
+========================= -->
+
+<section id="accueil">
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <small>BIENVENUE SUR MON ESPACE PROFESSIONNEL</small>
+
+            <h1>
+                Sandrine <span>Chanhine</span>
+            </h1>
+
+            <h3>
+                Assistante polyvalente à distance
+            </h3>
+
+            <p>
+                Assistante administrative & marketing immobilier,
+                j'accompagne les entreprises dans la gestion,
+                l'organisation, le suivi des dossiers et leurs
+                activités digitales.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#experiences" class="btn btn-primary">
+                    Découvrir mon parcours
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Me contacter
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo">
+
+            <p>
+                Votre photo professionnelle<br>
+                pourra être ajoutée ici.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     À PROPOS
+========================= -->
+
+<section id="apropos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>À <span>propos</span></h2>
+
+            <p>Quelques mots sur mon profil</p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>Mon profil</h3>
+
+                <p>
+                    Assistante polyvalente à distance avec plus de
+                    4 ans d'expérience dans la gestion administrative,
+                    le suivi des dossiers, la mise à jour de données
+                    et la relation avec différents interlocuteurs.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>Ma façon de travailler</h3>
+
+                <p>
+                    Organisation, rigueur, autonomie, écoute active
+                    et flexibilité sont au cœur de ma manière de
+                    travailler. J'apprécie particulièrement les
+                    missions qui demandent de la précision et un
+                    bon sens de l'organisation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCES
+========================= -->
+
+<section id="experiences">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Mes <span>expériences</span></h2>
+
+            <p>Un parcours orienté administratif, digital et relationnel</p>
+
+        </div>
+
+
+        <div class="experience-list">
+
+
+            <div class="experience">
+
+                <h3>JNlab — Community Manager & Assistante polyvalente</h3>
+
+                <div class="date">
+                    Avril 2026 – Aujourd'hui · Mi-temps
+                </div>
+
+                <div class="location">
+                    France · Télétravail
+                </div>
+
+                <p>
+                    Gestion et suivi de dossiers étudiants, collecte,
+                    organisation et mise à jour des documents et
+                    informations, communication digitale, création
+                    de contenus et suivi des demandes.
+                </p>
+
+            </div>
+
+
+            <div class="experience">
+
+                <h3>Cherry Dolls — Assistante virtuelle</h3>
+
+                <div class="date">
+                    Septembre 2025 – Juin 2026 · Mi-temps
+                </div>
+
+                <div class="location">
+                    France · Télétravail
+                </div>
+
+                <p>
+                    Mise à jour de données dans Notion, suivi de dossiers,
+                    traitement des demandes, relation client,
+                    organisation et vérification des informations.
+                </p>
+
+            </div>
+
+
+            <div class="experience">
+
+                <h3>Liberté Gestion — Assistante polyvalente en immobilier</h3>
+
+                <div class="date">
+                    Mai 2025 – Août 2025
+                </div>
+
+                <div class="location">
+                    France · Télétravail
+                </div>
+
+                <p>
+                    Gestion administrative de documents immobiliers,
+                    vérification des informations, mise à jour et
+                    suivi des dossiers, tâches administratives courantes
+                    et échanges avec différents interlocuteurs.
+                </p>
+
+            </div>
+
+
+            <div class="experience">
+
+                <h3>KASIA Consulting — Community Manager</h3>
+
+                <div class="date">
+                    Septembre 2023 – Février 2024
+                </div>
+
+                <div class="location">
+                    Fianarantsoa
+                </div>
+
+                <p>
+                    Création de contenus et visuels simples sur Canva,
+                    gestion des réseaux sociaux, suivi des performances,
+                    coordination et traitement des demandes de communication.
+                </p>
+
+            </div>
+
+
+            <div class="experience">
+
+                <h3>Elia Beauté / Oulfa.fr — Assistante web & rédactrice</h3>
+
+                <div class="date">
+                    Mai 2019 – Août 2019
+                </div>
+
+                <div class="location">
+                    France · Télétravail
+                </div>
+
+                <p>
+                    Rédaction et intégration de contenus web,
+                    mise à jour des contenus, modération et
+                    accompagnement des utilisateurs.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MISSIONS
+========================= -->
+
+<section id="missions">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Mes <span>missions</span></h2>
+
+            <p>Les tâches que je peux prendre en charge à distance</p>
+
+        </div>
+
+
+        <div class="missions-grid">
+
+            <div class="mission">
+                <span>✓</span>
+                Tri et sélection de CV
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Gestion des e-mails
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Gestion et suivi de l'agenda
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Mise à jour des informations
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Archivage et classement des documents
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Organisation et suivi des dossiers
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Relances et suivi des demandes
+            </div>
+
+            <div class="mission">
+                <span>✓</span>
+                Gestion administrative
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMPETENCES
+========================= -->
+
+<section id="competences">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Mes <span>compétences</span></h2>
+
+            <p>Des compétences adaptées au travail à distance</p>
+
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill">
+                <strong>Gestion et suivi de dossiers</strong>
+                Organisation, classement et suivi des informations.
+            </div>
+
+            <div class="skill">
+                <strong>Collecte et organisation des documents</strong>
+                Centralisation et structuration des documents.
+            </div>
+
+            <div class="skill">
+                <strong>Vérification et mise à jour</strong>
+                Contrôle et actualisation des informations.
+            </div>
+
+            <div class="skill">
+                <strong>Relances et suivi</strong>
+                Suivi des demandes et communication avec les interlocuteurs.
+            </div>
+
+            <div class="skill">
+                <strong>Gestion administrative</strong>
+                Organisation des tâches administratives quotidiennes.
+            </div>
+
+            <div class="skill">
+                <strong>Communication</strong>
+                Communication écrite et échanges professionnels.
+            </div>
+
+            <div class="skill">
+                <strong>CRM & bases de données</strong>
+                Mise à jour et suivi des informations.
+            </div>
+
+            <div class="skill">
+                <strong>Travail à distance</strong>
+                Autonomie, organisation et rigueur.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OUTILS
+========================= -->
+
+<section id="outils">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Mes <span>outils</span></h2>
+
+            <p>Les outils numériques que j'utilise</p>
+
+        </div>
+
+
+        <div class="tools">
+
+            <div class="tool">Notion</div>
+
+            <div class="tool">Google Workspace</div>
+
+            <div class="tool">Pack Office</div>
+
+            <div class="tool">EBP</div>
+
+            <div class="tool">Slack</div>
+
+            <div class="tool">Brevo</div>
+
+            <div class="tool">Trello</div>
+
+            <div class="tool">Meta Business</div>
+
+            <div class="tool">Canva</div>
+
+            <div class="tool">Hootsuite</div>
+
+            <div class="tool">Figma</div>
+
+            <div class="tool">CapCut</div>
+
+            <div class="tool">Outils IA</div>
+
+            <div class="tool">CRM</div>
+
+            <div class="tool">Outils collaboratifs</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FORMATION
+========================= -->
+
+<section id="formation">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Ma <span>formation</span></h2>
+
+            <p>Formation académique et linguistique</p>
+
+        </div>
+
+
+        <div class="formation-list">
+
+
+            <div class="formation">
+
+                <h3>Master 2 en Communication</h3>
+
+                <p>
+                    Parcours : Organisation des entreprises
+                </p>
+
+            </div>
+
+
+            <div class="formation">
+
+                <h3>Centre National de Télé-enseignement de Madagascar</h3>
+
+                <p>
+                    2022 – 2023
+                </p>
+
+            </div>
+
+
+            <div class="formation">
+
+                <h3>Diplôme d'études en langue française</h3>
+
+                <p>
+                    Alliance Française Ambositra · 2012 – 2013
+                </p>
+
+            </div>
+
+
+            <div class="formation">
+
+                <h3>Baccalauréat A2</h3>
+
+                <p>
+                    Lycée Rakotoarisoa Ambositra
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LANGUES
+========================= -->
+
+<section id="langues">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Mes <span>langues</span></h2>
+
+        </div>
+
+
+        <div class="languages">
+
+            <div class="language">
+
+                <h3>🇫🇷 Français</h3>
+
+                <p>
+                    Niveau professionnel · 85%
+                </p>
+
+            </div>
+
+
+            <div class="language">
+
+                <h3>🇬🇧 Anglais</h3>
+
+                <p>
+                    Niveau intermédiaire · 52%
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Travaillons ensemble</h2>
+
+            <p>
+                Vous recherchez une assistante polyvalente,
+                organisée et autonome à distance ?
+                N'hésitez pas à me contacter.
+            </p>
+
+
+            <div class="contact-info">
+
+                <a href="mailto:sandrinehine06@gmail.com">
+                    ✉️ sandrinehine06@gmail.com
+                </a>
+
+                <a href="tel:+261341323166">
+                    📞 +261 34 13 231 66
+                </a>
+
+                <a href="tel:+261328866489">
+                    📞 +261 32 88 66 489
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Sandrine Chanhine —
+    <span>Assistante polyvalente à distance</span>
+
+</footer>
+
+
+</body>
+</html>
